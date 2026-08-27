@@ -1,0 +1,6 @@
+wwwroot\app.js
+wwwroot\index.html
+wwwroot\style.css
+C:\Users\Usuario\Documents\CarteiraDigital-master\wwwroot\app.js
+C:\Users\Usuario\Documents\CarteiraDigital-master\wwwroot\index.html
+C:\Users\Usuario\Documents\CarteiraDigital-master\wwwroot\style.css

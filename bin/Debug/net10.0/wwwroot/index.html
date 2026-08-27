@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carteira Lazuli</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="app">
+
+		<header class="topbar">
+			<div class="brand">
+				<span class="brand-mark">◆</span>
+				<span class="brand-name">Carteira<strong>Digital</strong></span>
+			</div>
+			<button class="btn btn-ghost" id="btnNovoUsuario" type="button">+ Novo usuário</button>
+		</header>
+
+		<main class="layout">
+
+			<!-- Cartão da conta ativa -->
+			<section class="panel account-panel">
+
+				<div class="wallet-card" id="walletCard">
+					<div class="wallet-card__top">
+						<span class="wallet-card__label">Saldo disponível</span>
+						<span class="wallet-card__chip" aria-hidden="true"></span>
+					</div>
+					<div class="wallet-card__balance">
+						<span class="wallet-card__currency">R$</span>
+						<span class="wallet-card__amount" id="walletAmount">0,00</span>
+					</div>
+					<div class="wallet-card__bottom">
+						<span class="wallet-card__owner" id="walletOwner">Nenhuma conta selecionada</span>
+						<span class="wallet-card__id" id="walletId">&nbsp;</span>
+					</div>
+				</div>
+
+				<div class="field">
+					<label for="contaAtiva">Conta ativa</label>
+					<select id="contaAtiva">
+						<option value="">Selecione um usuário…</option>
+					</select>
+				</div>
+
+				<div class="tabs" role="tablist">
+					<button class="tab is-active" data-tab="deposito" type="button" role="tab">Depósito</button>
+					<button class="tab" data-tab="saque" type="button" role="tab">Saque</button>
+					<button class="tab" data-tab="transferencia" type="button" role="tab">Transferir</button>
+				</div>
+
+				<form class="tab-panel is-active" data-panel="deposito" id="formDeposito">
+					<div class="field">
+						<label for="valorDeposito">Valor do depósito</label>
+						<input type="number" id="valorDeposito" placeholder="0,00" min="0.01" step="0.01" inputmode="decimal">
+					</div>
+					<button class="btn btn-primary" type="submit">Depositar</button>
+				</form>
+
+				<form class="tab-panel" data-panel="saque" id="formSaque">
+					<div class="field">
+						<label for="valorSaque">Valor do saque</label>
+						<input type="number" id="valorSaque" placeholder="0,00" min="0.01" step="0.01" inputmode="decimal">
+					</div>
+					<button class="btn btn-danger" type="submit">Sacar</button>
+				</form>
+
+				<form class="tab-panel" data-panel="transferencia" id="formTransferencia">
+					<div class="field">
+						<label for="destinoTransf">Transferir para</label>
+						<select id="destinoTransf">
+							<option value="">Selecione o destinatário…</option>
+						</select>
+					</div>
+					<div class="field">
+						<label for="valorTransf">Valor</label>
+						<input type="number" id="valorTransf" placeholder="0,00" min="0.01" step="0.01" inputmode="decimal">
+					</div>
+					<button class="btn btn-primary" type="submit">Transferir</button>
+				</form>
+
+			</section>
+
+			<!-- Usuários e histórico -->
+			<section class="panel side-panel">
+
+				<div class="tabs" role="tablist">
+					<button class="tab is-active" data-side="usuarios" type="button" role="tab">Usuários</button>
+					<button class="tab" data-side="historico" type="button" role="tab">Histórico</button>
+				</div>
+
+				<div class="side-view is-active" data-side-panel="usuarios">
+					<div class="field field-search">
+						<input type="search" id="buscaUsuario" placeholder="Buscar usuário por nome ou ID…">
+					</div>
+					<ul class="user-list" id="listaUsuarios">
+						<li class="empty-state">Carregando usuários…</li>
+					</ul>
+				</div>
+
+				<div class="side-view" data-side-panel="historico">
+					<ul class="history-list" id="listaHistorico">
+						<li class="empty-state">Carregando histórico…</li>
+					</ul>
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- Novo usuário -->
+		<div class="modal-backdrop" id="modalBackdrop">
+			<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+				<h2 id="modalTitulo">Novo usuário</h2>
+				<form id="formNovoUsuario">
+					<div class="field">
+						<label for="nomeUsuario">Nome</label>
+						<input type="text" id="nomeUsuario" placeholder="Nome completo" autocomplete="off">
+					</div>
+					<div class="modal-actions">
+						<button class="btn btn-ghost" type="button" id="btnCancelarNovoUsuario">Cancelar</button>
+						<button class="btn btn-primary" type="submit">Cadastrar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
