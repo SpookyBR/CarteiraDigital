@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\CarteiraDigital-master\\MinhaPrimeiraApi.csproj": {}
+    "/workspaces/CarteiraDigital/MinhaPrimeiraApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\CarteiraDigital-master\\MinhaPrimeiraApi.csproj": {
+    "/workspaces/CarteiraDigital/MinhaPrimeiraApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\CarteiraDigital-master\\MinhaPrimeiraApi.csproj",
+        "projectUniqueName": "/workspaces/CarteiraDigital/MinhaPrimeiraApi.csproj",
         "projectName": "MinhaPrimeiraApi",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\CarteiraDigital-master\\MinhaPrimeiraApi.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\CarteiraDigital-master\\obj\\",
+        "projectPath": "/workspaces/CarteiraDigital/MinhaPrimeiraApi.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/CarteiraDigital/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
@@ -82,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.403/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

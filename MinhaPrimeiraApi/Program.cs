@@ -5,7 +5,7 @@ builder.Services.AddOpenApi();
 
 //Suporte no Sqlite
 builder.Services.AddDbContext<AppDbContext>(option =>
-    option.UseSqlite("Data Source=carteira.db"));
+    option.UseSqlite($"Data Source={Path.Combine(builder.Environment.ContentRootPath, "carteira.db")}"));
 
 builder.Services.AddCors(options =>
 {
