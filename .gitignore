@@ -1,0 +1,12 @@
+# Pastas de compilação
+bin/
+obj/
+
+# Pastas locais do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Arquivos de log e cache
+*.log
+.dtbcache.v2
